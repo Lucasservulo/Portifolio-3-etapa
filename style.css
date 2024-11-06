@@ -13,6 +13,25 @@ header a{
 .Mode{
     display: none;
 }
+.menu-toggle {
+    display: none; /* Esconde o menu toggle por padrão */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background: #fff;
+    margin: 4px;
+}
+
+/* Exibe o menu toggle em dispositivos móveis */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex
+    }
+}
 
 .whitemode{
     --Font: #141414;
@@ -391,4 +410,61 @@ padding: 0; /* Remove o padding */
 }
 .botao-direita {
     right: 10px;
+}
+/* Estilos gerais para desktop */
+header {
+    width: 100vw;
+    height: 50vh;
+    background-image: url(imgs/Black\ and\ White\ Simple\ Art\ Director\ LinkedIn\ Banner\ \(2\)\ 1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#divHeaderText {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: end;
+    padding: 0 15%;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    header {
+        height: auto; /* Ajusta a altura do cabeçalho */
+        background-size: cover; /* Faz a imagem de fundo cobrir */
+    }
+
+    #divHeaderText {
+        flex-direction: column; /* Muda a direção para coluna */
+        align-items: center; /* Centraliza os itens */
+        padding: 10px; /* Adiciona um padding menor */
+    }
+
+    #divHeaderText h1 {
+        font-size: 1.5em; /* Reduz o tamanho da fonte */
+        padding: 10px 0; /* Adiciona espaçamento entre os itens */
+    }
+
+    #QuemSouEu {
+        flex-direction: column; /* Muda a direção para coluna */
+        align-items: center; /* Centraliza os itens */
+        margin: 0 5%; /* Ajusta a margem */
+    }
+
+    #QuemSouEu img {
+        width: 100%; /* Faz a imagem ocupar 100% da largura */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+
+    #QuemSouEu h1, #QuemSouEu p {
+        text-align: center; /* Centraliza o texto */
+        padding: 0 5%; /* Adiciona padding */
+    }
+
+    footer {
+        flex-direction: column; /* Muda a direção para coluna */
+        align-items: center; /* Centraliza os itens */
+        font-size: 1em; /* Ajusta o tamanho da fonte */
+    }
 }
