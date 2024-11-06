@@ -6,13 +6,30 @@
     box-sizing: border-box;
 
 }
-
-a{
+header a{
     text-decoration: none;
     padding-left: 5%;
 }
+.Mode{
+    display: none;
+}
+
+.whitemode{
+    --Font: #141414;
+    --Destac: #468DCF;
+    --Background: #afafaf;
+    --BackgroundFooter: rgb(252, 208, 188);
+}
+.darkmode{
+    --Font: #FFFFFF;
+    --Destac: #2a4157;
+    --Background: #3D3939;
+    --BackgroundFooter: black;
+}
+
+
 body{
-    background-color: #3D3939;
+    background-color: var(--Background);
     Overflow-x: hidden;
 }
 header{
@@ -57,7 +74,7 @@ header{
 }
 #QuemSouEu h1{
     text-decoration:underline;
-    text-decoration-color: #468DCF;
+    text-decoration-color: var(--Destac);
     text-decoration-thickness: 2px;
     font-size: 2.5em;
     padding-left: 40%;
@@ -65,10 +82,10 @@ header{
     font-family: "Kodchasan", sans-serif;
     font-weight: 300;
     font-style: normal;
-    color: #FFFFFF;
+    color: var(--Font);;
 }
 #QuemSouEu p{
-    color: #FFFFFF;
+    color: var(--Font);;
     font-size: 1.5em;
     font-family: "Corben", serif;
     font-weight: 400;
@@ -82,7 +99,8 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 120vh;
+    height: 70vw;
+    color: black;
 
 }
 
@@ -96,8 +114,8 @@ header{
 }
 .FloatingSpace{
     padding: 10% 0;
-    width: 300px;
-    height: 300px;
+    width: 20vw;
+    height: 20vw;
     background-color: #FFFFFF;
     border-radius: 10%;
     position: relative;
@@ -120,7 +138,7 @@ header{
     height: 60%;
     margin-top: 10%;
     margin-left: 15%;
-    background-color: #468DCF;
+    background-color: var(--Destac);
 
    
 
@@ -147,7 +165,7 @@ header{
     height: 300px;
     margin-bottom: 20px;
     color: var(--FontDefault);
-    background-color: #FFFFFF;
+    background-color: var(--Font);;
     border-radius: 8px;
     padding: 10px 10px;
 }
@@ -157,7 +175,7 @@ header{
     height: 50px;
     margin-bottom: 20px;
     color: var(--FontDefault);
-    background-color: #FFFFFF;
+    background-color: var(--Font);
     border-radius: 8px;
     padding: 0 10px;
 }
@@ -168,7 +186,7 @@ header{
     margin-bottom: 20%;
     font-size: 32px;
     color: var(--FontDefault);
-    background-color: #FFFFFF;
+    background-color: var(--Font);
     font-family: "Jaro", sans-serif;
     font-optical-sizing:auto;
 
@@ -203,7 +221,7 @@ header{
     font-family: "Kodchasan", sans-serif;
     font-weight:200;
     font-style: normal;
-    color: #FFFFFF;
+    color: var(--Font);
 
 }
 #conteinerExperiecias{
@@ -214,10 +232,10 @@ header{
     font-family: "Corben", serif;
     font-weight: 400;
     font-style: normal;
-    color: #FFFFFF;
+    color: var(--Font);
 }
 #experiencias img{
-    border: 10px #468DCF solid;
+    border: 10px var(--Destac) solid;
     margin-right: 2%;
     float: left;
 }
@@ -225,5 +243,152 @@ header{
     margin: 50px 0px;
     height: 3px;
     width: 100%;
-    background-color: #468DCF;
+    background-color: var(--Destac);
+}
+#Logos{
+    display: flex;
+    flex-direction: row;
+}
+
+footer{
+    height: 30vh;
+    background-color: var(--BackgroundFooter);
+    color: var(--Font);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 2em;
+    fill: var(--Font);
+}
+
+#aprendizado h1{
+    text-decoration-color: var(--Destac);
+    font-size: 3em;
+    /* padding-bottom: 5vw; */
+
+}
+#aprendizado{
+    color: var(--Font);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+/* Estilo para a lista */
+
+.lista-vertical {
+list-style: none; /* Remove os marcadores padrão */
+padding: 0; /* Remove o padding */
+}
+
+/* Estilo para cada item da lista */
+.lista-vertical li {
+    margin-bottom: 10px; /* Espaçamento entre os itens */
+    position: relative; /* Para posicionar a bolinha azul */
+    padding-left: 25px; /* Espaçamento para a bolinha */
+    font-size: 2em;
+}
+
+/* Estilo para a bolinha azul */
+.bolinha {
+    position: absolute; /* Posiciona a bolinha em relação ao item */
+    left: 0; /* Alinha à esquerda do item */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta a posição vertical */
+    width: 20px; /* Largura da bolinha */
+    height: 20px; /* Altura da bolinha */
+    background-color: blue; /* Cor da bolinha */
+    border-radius: 50%; /* Deixa a bolinha redonda */
+}
+#projetos{
+    color: var(--Font);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#projetos h1{
+    padding-top: 5vh;
+    text-decoration-color: var(--Destac);
+    font-size: 3em;
+    /* padding-bottom: 5vw; */
+
+}
+#conteinercarrosel{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding-bottom: 10vh;
+}
+/* #conteinercarrosel svg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+#carrosel{
+    background-color: black;
+    width: 50vw;
+    height: 60vh;
+    overflow: hidden;
+    position: relative;
+
+}
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.slide {
+    min-width: 300px;
+    box-sizing: border-box;
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+} */
+
+.carrossel {
+    overflow: hidden;
+    position: relative;
+    width: 50%; /* Ajuste conforme necessário */
+    height: 400px; /* Defina uma altura fixa para o carrossel */
+}
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 100%;
+}
+.slide {
+    flex: 0 0 auto; /* Permite que o slide tenha largura automática */
+    width: 100%; /* Cada slide ocupa 100% da largura do carrossel */
+    height: 100%; /* Cada slide ocupa 100% da altura do carrossel */
+    position: relative; /* Para posicionar a imagem dentro do slide */
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem cobrir o slide */
+    position: absolute; /* Para garantir que a imagem preencha o slide */
+    top: 0;
+    left: 0;
+}
+.botao {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+.botao-esquerda {
+    left: 10px;
+}
+.botao-direita {
+    right: 10px;
 }
